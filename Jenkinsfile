@@ -1,8 +1,7 @@
-pipeline {
-    agent any
+node {
 
     stages {
-      
+
         // get the code from SCM
         stage('SCM') {
           steps {
