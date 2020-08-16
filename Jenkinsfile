@@ -1,16 +1,12 @@
 node {
     // get the code from SCM
     stage('SCM') {
-      steps {
-        git 'https://github.com/pythoncpp/devops-app-db.git'
-      }
+      git 'https://github.com/pythoncpp/devops-app-db.git'
     }
 
     // building the docker image
     stage('Build Docker image') {
-      steps {
-        sh 'docker image build . -t pythoncpp/devops-app-db'
-      }
+      sh 'docker image build . -t pythoncpp/devops-app-db'
     }
 
     // pushing the image to the docker hub
